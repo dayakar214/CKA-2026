@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx-5
+  name: nginx-5
+spec:
+  containers:
+  - image: nginx
+    name: nginx-5
+  tolerations: 
+  - key: "dedicated"
+    operator: "Equal" 
+    value: "cpu"
+    effect: "NoSchedule"
+
+
